@@ -1,0 +1,39 @@
+<html>
+    <head>
+
+        
+    </head>
+    <body>
+        <div id="buttonDataDiv"></div>
+        <div id="buttonsDiv"></div>
+
+        <input id="inputElement" type="text">
+
+        <script>
+            let buttonData = ["One", "Two", "Three", "Four", "Eighteen"]
+            let buttonDataDiv = document.querySelector("#buttonDataDiv")
+            let buttonsDiv = document.querySelector("#buttonsDiv")
+
+            function buttonClicked(e) {
+                console.log(e.target.innerHTML);
+                buttonDataDiv.innerHTML = e.target.innerHTML;
+                console.log(inputElement.value);
+
+                let notCaseSensitive = (String)(inputElement.value).toLowerCase();
+                if (notCaseSensitive === "password") {
+                    console.log("Correct!");
+                } else {
+                    console.log
+                }
+            }
+
+            for(let i=0; i<buttonData.length; i++) {
+                let buttonObj = document.createElement("button");
+                buttonObj.innerHTML = buttonData[i];
+                buttonObj.addEventListener("click", buttonClicked);
+                buttonsDiv.append(buttonObj)
+            }
+
+        </script>
+    </body>
+</html>

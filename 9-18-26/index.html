@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title>CSS 336 Fall 2026 - Javascript Day 1</title>
+    <style>
+        #demoDiv {
+            background-color: #9cc7b2;
+        }
+    </style>
+
+</head>
+    <body>
+        <div id="demoDiv">Inside Div</div>
+
+        <script>
+            console.log("hello world from inside index.html!");
+            let foo = 9.4;
+            let bar = 12;
+            let sum = foo + bar;
+            console.log(sum);
+
+            if (sum > 20) {
+                console.log(sum + " is greater than 20")
+            } else {
+                console.log("hello")
+            }
+
+            for (let i = 0; i < 20; i++) {
+                console.log("hello");
+            }
+
+            function add3(a, b, c) {
+                let sumOfParams = a + b + c;
+                return sumOfParams;
+            }
+
+            add3(1, 6, 9);
+
+            let obj = {};
+            obj.x = 10;
+            obj.log = function(a) {
+                console.log(a);
+            }
+
+            obj.log("h");
+
+            let demoDiv = document.querySelector("#demoDiv");
+
+            for (let i = 0; i < 100; i++) {
+                let randomNumber = Math.random();
+                let newDiv = document.createElement("div");
+                newDiv.classList.add("randomList");
+                newDiv.innerHTML = randomNumber;
+                demoDiv.append(newDiv);
+            }
+        </script>
+    </body>
+</html>
