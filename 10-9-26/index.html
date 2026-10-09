@@ -1,0 +1,61 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="currentUsersDiv"></div>
+        <form id="userDataForm">
+            <input id="nameInputField" type="text" placeholder="Name...">
+            <input type="submit">
+        </form>
+        
+
+
+        <script>
+            let userData = []
+
+            let userForm = document.querySelector("#userDataForm")
+            let nameInputField = document.querySelector("#nameInputField")
+            let currentUsersDiv = document.querySelector("#currentUsersDiv");
+
+            let localStorageKey = "users";
+
+            document.addEventListener('DOMContentLoaded', (event) => {
+
+                let localStorageData = localStorage.getItem(localStorageKey);
+                console.log(localStorageData);
+
+                userData = JSON.parse(localStorageData);
+                console.log(userData);
+                updateUserList(userData);
+
+
+            })
+
+            userForm.addEventListener("submit", (event) => {
+                event.preventDefault();
+
+                userData.push(nameInputField.value);
+                nameInputField.value = "";
+                console.log(userData)
+
+                updateUserList(userData)
+            })
+
+            function updateUserList(data) {
+                currentUsersDiv.innerHTML = ""
+                let userListElement = document.createElement("ul")
+                currentUsersDiv.append(userListELement);
+                userData.forEach((user) => {
+
+                    let jsonStringVersionOfData = JSON.stringify(data);
+                    console.log(data)
+                    console.log(jsonStringVersionOfData)
+                });
+            }
+
+
+
+        </script>
+    </body>
+</html>

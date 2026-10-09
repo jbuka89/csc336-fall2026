@@ -15,23 +15,37 @@ const productList = [
     name: "Nike Shoes",
     price: 69.99,
     description: "Nike Sneakers. Size and color changeable.",
-    image: "shoes.webp",
+    image: "shoes.png",
     category: "Clothing"
+  },
+
+    {
+    name: "Louisville Slugger Bat",
+    price: 49.99,
+    description: "Louisville Slugger Genuine MIX Unfinished Natural Clear Baseball Bat - 34",
+    image: "bat.png",
+    category: "Sports"
   },
 
     {
     name: "Nintendo Switch 2",
     price: 499.99,
     description: "Nintendo Switch 2 - The next evolution of Nintendo Switch",
-    image: "switch2.jpg",
+    image: "switch2.png",
     category: "Electronics"
   }, 
-
+    {
+    name: "Nike Men's Park T Shirt",
+    price: 23.99,
+    description: "Dri-FIT technology helps keep you dry and comfortable",
+    image: "nike.png",
+    category: "Clothing"
+  }, 
     {
     name: "Wilson NFL MVP Football",
     price: 15.95,
     description: "Wilson NFL MVP Football - Official Size, Brown",
-    image: "football.avif",
+    image: "football.png",
     category: "Sports"
   }
 ]
@@ -75,7 +89,7 @@ function renderProduct(p, clear=false){
     product.append(productName)
     
     let productPrice = document.createElement("h2")
-    productPrice.innerHTML = p.price;
+    productPrice.innerHTML = ("$" + p.price);
     product.append(productPrice)
 
     let productDescription = document.createElement("p")
@@ -133,7 +147,7 @@ function renderCart(){
         items += 1
     })
 
-    cartPrice.innerHTML = ("$" + totalPrice + "(" + items + " items)")
+    cartPrice.innerHTML = ("$" + totalPrice.toFixed(2) + " (" + items + " items)")
     cartDiv.append(cartPrice)
 
     cart.forEach(p => {
@@ -147,7 +161,7 @@ function renderCart(){
 
         
         let cartPrice = document.createElement("h2")
-        cartPrice.innerHTML = p.price;
+        cartPrice.innerHTML = "$" + p.price;
         cartProduct.append(cartPrice)
 
         cartDiv.append(cartProduct)

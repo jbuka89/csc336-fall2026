@@ -1,7 +1,12 @@
+html {
+    background-color: #FFEEE6;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
 #title {
     text-align: center;
     color: #000000;
-    background: #FFFFFF;
     text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
     font-size: 100px;
     border: 2px dotted #F11EBF;
@@ -13,16 +18,13 @@
     gap: 50px;
     width: 20%;
     flex-direction: row;
-    border: 2px dotted #F11EBF;
     width: 90%
 }
 
 .product {
   height: fit-content;
   width: 300px;
-  background-color: #ebebeb;
-  border: 5px solid #ffffff;
-  border-bottom: 40px solid #ffffff;
+  border: 10px solid #FFAA80;
   left: 50%;
   top: 50%;
   border-radius: 8%;
@@ -38,6 +40,8 @@
 
 .product h1 {
     text-align: center;
+    font-weight: normal;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .product img {
@@ -58,17 +62,46 @@
     visibility: visible;
 }
 
+.product button {
+
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+    background: #FFD814;
+    border: 1px solid #FCD200;
+    font-size: 13px;
+    height: 31px;
+    padding: 0 11px;
+    text-align: center;
+    width: 100%;
+    min-width: 200px;
+    font-weight: 500;
+    color: #0F1111;
+                
+                
+}
+
+.product button:hover  {
+    background: #F7CA00;
+    border-color: #F2C200;
+    box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);   
+}
+
 #checked {
-    background-color: red;
+    background-color: #FFAA80;
 }
 
 .cartDiv{
-    position: fixed;
+    position: absolute;
     right: 0;
+    top: 16%;
     width: 10%;
-    height:100%;
-    background-color: red;
+    height:fit-content;
+    background-color: #FFAA80;
     text-align: center;
+    vertical-align: center;
 }
 
 .cartDiv h1{
@@ -76,7 +109,6 @@
 }
 
 .cartProduct{
-    background-color: blue;
     width: 100%;
     height: max-content;
     flex-grow: 1;
@@ -94,4 +126,28 @@
 
 #notInvisible {
     visibility: visible;
+}
+
+.buttonsDiv button {
+
+    outline: 0;
+    grid-gap: 8px;
+    align-items: center;
+    background: 0 0;
+    border: 1px solid #000;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    flex-shrink: 0;
+    font-size: 16px;
+    gap: 8px;
+    justify-content: center;
+    line-height: 1.5;
+    overflow: hidden;
+    padding: 12px 16px;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    transition: all .14s ease-out;
+    white-space: nowrap;
+                
 }
