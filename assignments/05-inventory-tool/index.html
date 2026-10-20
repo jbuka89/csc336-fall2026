@@ -1,0 +1,50 @@
+<html>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+<body>
+    <div id="root">
+    <head>
+    <meta charset="UTF-8">
+        <title>
+            E-Store
+        </title>
+
+    </head>
+
+    <form id="productForm">
+        <label for="nameInput">Product Name</label>
+        <input id="nameInput" name="name" type="text" placeholder="Enter Product Name..">
+        <input id="priceInput" name="price" type="number" min="0" step=".01" placeholder="Enter Price">
+        <input id="linkInput" name="image" type="url" placeholder="Enter Image URL">
+        <select id="categoryInput" name="category">
+            <option value="">Select a Category</option>
+            <option value="Sports">Sports</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Clothing">Clothing</option>
+        </select>
+        <input id="submitInput" name="submitInput" type="submit">
+    </form>
+
+    <button id="clearSavedProducts">Clear Saved Products</button>
+
+    <div class="cartDiv"></div>    
+    <h1 id="title">Nile</h1>
+
+    <div class="buttonsDiv">
+        <button onClick="filterProducts(this)">All</button>
+        <button onClick="filterProducts(this)">Clothing</button>
+        <button onClick="filterProducts(this)">Sports</button>
+        <button onClick="filterProducts(this)">Electronics</button>
+    </div>
+    <br><br>
+    <div class="buttonsDiv">
+
+        <button id="addCart">Add Selected to Cart</button>
+        <button id="clearCart">Clear Cart</button>
+    </div>
+
+    <div class="productDiv"></div>
+    
+</div>
+</body>
+</html>
