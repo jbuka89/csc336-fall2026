@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <script>
+            let fetchResponse = fetch("https://dog.ceo/api/breeds/image/random");
+            fetchResponse.then((data) => {
+                return data.json();
+            }).then((data) => {
+                let bodyElement = document.querySelector("body");
+                for(let i =0; i < 100){
+                    let dogImg = document.createElement("img");
+                    dogImg.src = data.message;
+                    dogImg.width = Math.random() * 500;
+                    bodyElement.append(dogImg);
+                }
+            })
+        </script>
+    </body>
+</html>

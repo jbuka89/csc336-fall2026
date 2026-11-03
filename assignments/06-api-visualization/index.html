@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="style.css">
+
+<h1>Pokemon Stat Viewer</h1>
+
+<div style>
+  <canvas id="myChart1"></canvas>
+  <canvas id="myChart2"></canvas>
+</div>
+
+
+<div id="dropdown">
+    <label>Select Attributes to Compare:</label>
+
+    <select name="Attribute 1" id="atb1">
+        <option value="0">HP</option>
+        <option value="1">Attack</option>
+        <option value="2">Defense</option>
+        <option value="3">Special Attack</option>
+        <option value="4">Special Defense</option>
+        <option value="5">Speed</option>
+    </select>
+
+    <select name="Attribute 2" id="atb2">
+        <option value="0">HP</option>
+        <option value="1" selected>Attack</option>
+        <option value="2">Defense</option>
+        <option value="3">Special Attack</option>
+        <option value="4">Special Defense</option>
+        <option value="5">Speed</option>
+    </select>
+
+
+
+<div class="slidecontainer">
+  <label>Input Pokemon # to Compare (1-975):</label>
+  <input type="number" id="myNumber" min="1" max="975">
+  <button id="submitButton">Submit</button>
+  <p id="demo"></p>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="./script.js" defer></script>
+
+
+
+<body>
+</body>
+
+</html>
