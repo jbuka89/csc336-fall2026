@@ -6,5 +6,10 @@ const port = 3000;
 
 app.use(express.static("public"));
 
+app.get('/time', (req, res) => {
+    const currentTime = new Date().toString()
+    res.send(`The current time is: ${currentTime}`)
+})
+
 
 app.listen(port);
